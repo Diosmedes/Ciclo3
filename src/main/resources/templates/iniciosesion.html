@@ -48,37 +48,31 @@
                     <img src="img/abou.png" width="48" alt="">
                                        
                 </div>
-                 
+             <a th:href="@{/}" class="nav-item nav-link active">INICIO</a>
+                     
              <h2 class="fw-bold text-center py-5 ">Bienvenido</h2>
-                 
+             
              <!--LOGIN -->
              
-             <form action="#">
-                 <div class="mb-4">
-                     <label for="email" class="form-label">Correo electrónico</label>
-                     <input type="email"class="form-control" name="email">
-                 </div>
-                 <div class="mb-4">
-                    <label for="password" class="form-label">Password</label>
-                    <input type="password"class="form-control" name="password">
-                 </div>
-                 <div class="mb-4 form-check">
-                    <input type="checkbox" name ="connected" class="form-check-input">
-                    <label for="connected" class="form-check-label">Mantenerme conectado </label>
-                 </div>
-                 
-                 <div class="d-grid gap-2 col-6 mx-auto">
-                     
-                      <a th:href="@{/}" <button class="btn btn-primary" type="button">Iniciar Sesión</button></a>
-                      
-                 </div>
-                 
-                  <div class="my-3">
-                     <span> No tienes cuenta? <a href="#">Regístrate</a></span> <br>
-                     <span><a href="#">Recuperar Password</a></span>
-                 </div>
-              
-              </form>
+            <div class="formularioiniciosesion">
+                        <form method="post" th:action="@{/login}">
+                            <label for="username">Usuario</label>
+                            <input type="text" id="username" name="username" placeholder="Su usuario...">
+                            <br>
+                            <label for="password">Password</label>
+                            <input type="password" id="password" name="password" placeholder="Su password...">
+                            <br>
+                            <input type="submit" value="Iniciar Sesión">
+                            <div class="mb-4 form-check">
+                                <input type="checkbox" name ="connected" class="form-check-input">
+                                <label for="connected" class="form-check-label">Mantenerme conectado </label>
+                            </div>
+                            <div class="my-3">
+                                <span> No tienes cuenta? <a href="#">Regístrate</a></span> <br>
+                                <span><a href="#">Recuperar Password</a></span>
+                            </div>
+                        </form>
+            </div>
              
             <!--LOGIN CON  REDES SOCIALES -->
             <div class="container w-100 my-5">

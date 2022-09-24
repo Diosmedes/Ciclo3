@@ -12,10 +12,14 @@ public class ControladorInicioTuristic {
     public String inicio(){
        return "index" ;
     }
-    
-    
-    @GetMapping ("/iniciosesion")
-    public String iniciosesion(){
+    @GetMapping("/login")
+    public String inciosesion()
+    {
         return "iniciosesion";
+    }
+    @GetMapping("/loginadmin")
+    public String loginAdmin()
+    {
+        return "loginadmin";
     }
 }
