@@ -1,0 +1,130 @@
+
+<!doctype html>
+
+<html  xmlns:th="http://www.thymeleaf.org"lang="en"> 
+<head>
+    <meta charset="utf-8">
+    <title>Bienvenidos A TurisTIC</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+
+<!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet"> 
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+   <style>
+       
+       body{
+           background:#99ccff;
+           background: linear-gradient;(to right,#117a8b, #ff259);
+       }
+        
+   </style>
+
+ </head>
+ <body>
+     <div class="container w-75  mt-5 rounded shadow">
+        <div class="row align-items-stretch">
+            <div class="col bg" data-aos="zoom-in" data-aos-delay="100">
+                <div class="position-relative h-100">
+                    <img class="position-absolute w-100 h-100" src="img/login.jpg" style="object-fit: cover;">
+                </div>
+            </div>
+            
+             <div class="col bg-white ">
+                <div class="text-end">
+                    <img src="img/abou.png" width="48" alt="">
+                                       
+                </div>
+                 
+             <h2 class="fw-bold text-center py-5 ">Bienvenido</h2>
+                 
+             <!--LOGIN -->
+             
+             <form action="#">
+                 <div class="mb-4">
+                     <label for="email" class="form-label">Correo electrónico</label>
+                     <input type="email"class="form-control" name="email">
+                 </div>
+                 <div class="mb-4">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password"class="form-control" name="password">
+                 </div>
+                 <div class="mb-4 form-check">
+                    <input type="checkbox" name ="connected" class="form-check-input">
+                    <label for="connected" class="form-check-label">Mantenerme conectado </label>
+                 </div>
+                 
+                 <div class="d-grid gap-2 col-6 mx-auto">
+                     
+                      <a th:href="@{/}" <button class="btn btn-primary" type="button">Iniciar Sesión</button></a>
+                      
+                 </div>
+                 
+                  <div class="my-3">
+                     <span> No tienes cuenta? <a href="#">Regístrate</a></span> <br>
+                     <span><a href="#">Recuperar Password</a></span>
+                 </div>
+              
+              </form>
+             
+            <!--LOGIN CON  REDES SOCIALES -->
+            <div class="container w-100 my-5">
+                <div class="row text-center">
+                   <div class="col-12">Iniciar Sesión</div>
+               
+            </div>
+                <div class="row">
+                   <div class="col"> 
+                       <button class="btn btn-outline-primary w-100 my-1">
+                           <div class="row align-items-center">
+                               <div class="col-2">
+                                   <img src="img/fb.png" width="32"alt"">
+                               </div>
+                                   <div class="col-10 text-center">
+                                    Facebook
+                           </div>
+                      
+                        </div>
+                    </button>
+                </div>
+               
+                <div class="col"> 
+                       <button class="btn btn-outline-danger w-100 my-1">
+                           <div class="row align-items-center">
+                               <div class="col-2">
+                                   <img src="img/google.png" width="32"alt"">
+                               </div>
+                               
+                               <div class="col-10 text-center">
+                                    Google
+                               </div>
+                            </div>
+                    </button>
+                 </div>
+               
+          
+             
+         </div>
+         
+     </div>
+     
+<script src ="bootstrap/popper/popper.min.js"></script>
+<script src ="bootstrap/popper/bootstrap.min.js"></script>
+<script src ="bootstrap/js/bootstrap.min.js"></script>
+
+ </body>
+</html>
+
