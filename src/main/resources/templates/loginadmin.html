@@ -68,7 +68,7 @@
         </p>
         
         
-        <a th:href="@{/agregar}">Crear Usuario</a>
+        <a th:href="@{/crear}">Crear Usuario</a>
         
         <br>
         <br>
@@ -85,6 +85,8 @@
                     <th>Email</th>
                     <th>Usuario</th>
                     <th>Password</th>
+                    <th>Editar</th>
+                    <th>Eliminar</th>
                    
                 </tr>
                 <tr th:each="cliente : ${clientes}">
@@ -94,7 +96,8 @@
                     <td th:text="${cliente.correo}">Mostrar Email</td>
                     <td th:text="${cliente.usuario}">Mostrar Usuario</td>
                     <td th:text="${cliente.password}">Mostrar Password</td>
-            
+                    <td ><a th:href="@{/editar/}+${cliente.idcliente}" class="btn btn-success btn-sm">editar</a></td>
+                    <td><a th:href="@{/eliminar/}+${cliente.idcliente}"  class="btn btn-danger btn-sm">Eliminar</a></td>
                 </tr>
             </table>
          </div>
